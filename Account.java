@@ -22,5 +22,33 @@ public class Account{
         accountBalance -= withdrawal;
         System.out.println("Withdrawal successful \\n Account balance:" + accountBalance);
         
-    } 
+    }
+    
+    
 }
+    
+ class fixedDeposit extends Account{
+     
+     static float time, interest, num;
+     
+     static void interest (){
+         Scanner myObj2 = new Scanner(System.in);
+        System.out.println("Please enter the time period that you wish to leave your money in here for. \\n If you wish to enter this number in months, please press 1. \\n If you wish to enter it in years, press 2");
+         num= myObj2.nextFloat();
+         if(num==1){
+             System.out.println("Please enter the number of months:");
+             time=myObj2.nextFloat();
+             interest=(float)Math.pow((accountBalance*1.08),(time/12));
+             
+         }
+         else if(num==2){
+             System.out.println("Enter the number of years:");
+             time=myObj2.nextFloat();
+             interest= (float) Math.pow((accountBalance*1.08),time);
+         }
+         else{
+             System.out.println("Invalid Input!");
+             interest();
+         }
+     }
+ }
