@@ -28,7 +28,11 @@ System.out.println("Enter withdrawal amount:");
     System.out.println("Not enough account balance!");
    }
  }
-    
+  
+ public float checkBalance(){
+  System.out.println("Account balance:");
+  return accountBalance;
+ }
     
     
 }
