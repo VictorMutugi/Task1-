@@ -98,14 +98,35 @@ System.out.println("Enter withdrawal amount:");
 }
 
 class Savings extends Account{
- public float savingsInterest,savingsAccBal,savingsDeposit;
+ public float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;
  
   public void deposit(){
      
      System.out.print("Enter deposit amount:");
-     depositAmount= input.nextFloat();
-     accountBalance+=depositAmount;
+     savingsDeposit= input.nextFloat();
+    savingsAccBal+=savingsDeposit;
      System.out.print("Deposit successful!");
     }
+ 
+ public void savingsInterest(){
+   System.out.print("Enter the time period in months you lastly made a deposit:");
+  time=input.nextFloat();
+  savingsInterest= 0.015*savingsAccBal*time;
+   savingsAccBal+=savingsInterest;
+ }
+ 
+ public void withdraw(){
+System.out.println("Enter withdrawal amount:");
+  savingsWithdrawalAmount= input.nextFloat();
+  
+  if(savingsWithdrawalAmount<=savingsAccBal){
+  savingsAccBal-=savingsWithdrawalAmount;
+  System.out.println("Withdrawal successful!");
+  }
+   else {
+    System.out.println("Not enough account balance!");
+   }
+ }
+ 
  
 }
