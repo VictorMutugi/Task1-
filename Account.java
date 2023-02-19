@@ -1,3 +1,7 @@
+//Account class:(public) String accountName, accountTypes;float accountBalance, depositAmount, withdrawalAmount;int accountNum;
+//Current class:(public)  float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;
+
+
 import java.util.Scanner;
 
 public class Account{
@@ -93,4 +97,15 @@ System.out.println("Enter withdrawal amount:");
  
 }
 
-
+class Savings extends Account{
+ public float savingsInterest,savingsAccBal,savingsDeposit;
+ 
+  public void deposit(){
+     
+     System.out.print("Enter deposit amount:");
+     depositAmount= input.nextFloat();
+     accountBalance+=depositAmount;
+     System.out.print("Deposit successful!");
+    }
+ 
+}
