@@ -38,7 +38,7 @@ public class Main {
    case 2:
     Savings savings=new Savings();
     savings.deposit();
-    savings.interest();
+    savings.savingsInterest();
     System.out.println("To withdraw press 1. To quit, press 2.");
     num3=myObj.nextInt();
     switch(num3){
