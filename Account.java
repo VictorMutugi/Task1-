@@ -122,7 +122,7 @@ class Current extends Account{ //inheritance
   return accBal;
  };
  
- public void deposit(){//method OVERRIDING
+ public void deposit(){//method OVERRIDING   //Pollymorphism 
   System.out.print("Enter deposit amount:");
      depositAmountC= input.nextFloat();
      currentAccBal+=depositAmountC;
