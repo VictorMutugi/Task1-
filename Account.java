@@ -186,7 +186,7 @@ class Savings extends Account{ //inheritance
    System.out.println("Your total amount plus interest will be:" +savingsAccBal);
  }
  
- public void withdraw(){//method
+ public void withdraw(){//method.
 System.out.println("Enter withdrawal amount:");
   savingsWithdrawalAmount= input.nextFloat();
   
