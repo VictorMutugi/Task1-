@@ -163,7 +163,7 @@ class FixedDeposit{
   System.out.println("Choose the savings period that suits you from the list below.The time period is in years.");
   System.out.println("1 \n 2 \n 3 \n 4 \n 5");
   interestPlans=input.nextInt();
-  totalInterest=0.14*interestPlans*fixedAccBal;
+  totalInterest=(float)0.14*interestPlans*fixedAccBal;
   System.out.println("The total interest at the expiry of your plan is:" +totalInterest);
   fixedAccBal+=totalInterest;
  }
