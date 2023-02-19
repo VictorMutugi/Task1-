@@ -41,7 +41,7 @@ System.out.println("Enter withdrawal amount:");
 
 class Current extends Account{
  
- public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent;
+ public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;
  
  public float checkBalance(){
   System.out.println("Account balance:");
@@ -53,15 +53,22 @@ class Current extends Account{
      depositAmountC= input.nextFloat();
      currentAccBal+=depositAmountC;
      System.out.print("Deposit successful!");
+  
     }
  
   public void withdrawC(){
 System.out.println("Enter withdrawal amount:");
   withdrawalAmountC= input.nextFloat();
   if(withdrawalAmountC<=currentAccBal){
-  currentAccBal-=withdrawalAmountC;
-  System.out.println("Withdrawal successful!");
+   currentAccBal-=withdrawalAmountC;
+ System.out.println("Withdrawal successful!");
   }
+   else if(withdrawalAmountC>currentAccBal&&withdrawalAmountC<=50000){
+    overDraft= currentAccBal-withdrawalAmountC;
+    currentAccBal-=withdrawalAmountC;
+ System.out.println("Withdrawal successful! ");
+     System.out.println("An overdraft of" +overDraft");
+   }
    else {
     System.out.println("Not enough account balance!");
    }
@@ -81,5 +88,9 @@ System.out.println("Enter withdrawal amount:");
   System.out.println("Amount sent successfully!");
    
  }
+  
+ }
  
 }
+
+
