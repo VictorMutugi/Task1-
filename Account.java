@@ -109,7 +109,6 @@ System.out.println("Enter withdrawal amount:");
     
 }
 
-//We have agreed that the Account class will display the accountBalance of all the three accounts and each account will have it's own accounting.
 
 class Current extends Account{ //inheritance
  Scanner input= new Scanner(System.in);//object
