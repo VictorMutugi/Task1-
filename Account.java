@@ -83,7 +83,7 @@ System.out.println("Enter withdrawal amount:");
     overDraft= currentAccBal-withdrawalAmountC;
     currentAccBal-=withdrawalAmountC;
  System.out.println("Withdrawal successful! ");
-     System.out.println("An overdraft of" +overDraft");
+     System.out.println("An overdraft of" +overDraft);
    }
    else {
     System.out.println("Not enough account balance!");
