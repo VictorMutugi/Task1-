@@ -1,23 +1,19 @@
-//Account class:(public) String accountName, accountTypes;float accountBalance, depositAmount, withdrawalAmount;int accountNum;
-//Current class:(public)  float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;
-//Savings class: (public) float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;
-//Fixed Deposit class (public) String accountName, accountTypes;    (public) float accountBalance, depositAmount, withdrawalAmount; (public) int accountNum;
 
 import java.util.Scanner;
 
-public class Main {
+public class Main { //class concept
  public static void main(String[]args){
-  Scanner myObj=new Scanner(System.in);
+  Scanner myObj=new Scanner(System.in);//object
   int num1,num2,num3,num4;
   System.out.println("Welcome to your main account! We are delighted to have you.");
    System.out.println("Your account balance is zero.Please deposit some money.");
-  Account account= new Account();
+  Account account= new Account();//object
   account.deposit();
     System.out.println("Please choose the type of account that you want to access.\n press 1 for a current account.\n 2 For a Savings account\n 3 For a Fixed Deposit Account\n4 To withdraw money from your main account");
   num1=myObj.nextInt();
   switch(num1){
    case 1:
-  Current current=new Current();
+  Current current=new Current();//object
   current.depositC();
    System.out.println("Press 1 to check balance\n 2 to send money\n 3 to withdraw");
   num2=myObj.nextInt();
@@ -36,7 +32,7 @@ public class Main {
     break;
   
    case 2:
-    Savings savings=new Savings();
+    Savings savings=new Savings();//object
     savings.deposit();
     savings.savingsInterest();
     System.out.println("To withdraw press 1. To quit, press 2.");
@@ -53,7 +49,7 @@ public class Main {
     break;
     
    case 3:
-    FixedDeposit fixed=new FixedDeposit();
+    FixedDeposit fixed=new FixedDeposit();//object
     fixed.deposit();
     fixed.interestPlans();
     System.out.println("To withdraw from this account press 1. To quit, press2");
@@ -79,14 +75,11 @@ public class Main {
 }
 
 class Account{
- public String accountName, accountTypes;
-    public float accountBalance, depositAmount, withdrawalAmount;
-    public int accountNum;
+ public String accountName, accountTypes;//attributes
+    public float accountBalance, depositAmount, withdrawalAmount;//attributes
+    public int accountNum;//attribute
  
-/* public Account(String accountName, String accountTypes,float accountBalnce, float depositAmount, float withdrawalAmount){
-  this.
- }*/
-    Scanner input= new Scanner(System.in);
+    Scanner input= new Scanner(System.in);//object
     public void deposit(){
      
      System.out.print("Enter deposit amount:");
@@ -117,10 +110,10 @@ System.out.println("Enter withdrawal amount:");
 
 //We have agreed that the Account class will display the accountBalance of all the three accounts and each account will have it's own accounting.
 
-class Current extends Account{
- Scanner input= new Scanner(System.in);
+class Current extends Account{ //inheritance
+ Scanner input= new Scanner(System.in);//object
  
- public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;
+ public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;//attributes
  
  public float checkBalance(){
   System.out.println("Account balance:");
@@ -172,9 +165,9 @@ System.out.println("Enter withdrawal amount:");
  
 
 
-class Savings extends Account{
- Scanner input= new Scanner(System.in);
- public float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;
+class Savings extends Account{ //inheritance
+ Scanner input= new Scanner(System.in);//object
+ public float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;//attributes
  
   public void deposit(){
      
@@ -208,10 +201,10 @@ System.out.println("Enter withdrawal amount:");
 }
                         
                     
-class FixedDeposit{
- Scanner input= new Scanner(System.in);
- public int interestPlans;
- public float totalInterest, fixedAccBal,fixedDepositAmount, withdrawalAmountFD;
+class FixedDeposit extends Account { //inheritance
+ Scanner input= new Scanner(System.in);//object
+ public int interestPlans;//attribute
+ public float totalInterest, fixedAccBal,fixedDepositAmount, withdrawalAmountFD;//attribute
  
   public void deposit(){
      
