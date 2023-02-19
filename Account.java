@@ -113,8 +113,18 @@ System.out.println("Enter withdrawal amount:");
 class Current extends Account{ //inheritance
  Scanner input= new Scanner(System.in);//object
  
- public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;//attributes
+ 
+ public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent;//attributes
  public double accBal;
+ private float overDraft;    //ENCAPSULATION
+ 
+ public float getOverDraft(){
+  return overDraft;            //ENCAPSULATION
+ }
+ 
+ public void setOverDraft(float newOverDraft){
+  this.overDraft=newOverDraft;
+ }
  
  public double checkBalance(double accBal,float accountBalance){//method OVERLOADING
   accBal=accountBalance;
