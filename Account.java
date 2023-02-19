@@ -136,6 +136,9 @@ class FixedDeposit{
  public String interestPlans;
  public float totalInterest;
  
-  
+ public void interestPlans(){
+  System.out.println("Choose the savings period that suits you from the list below.");
+  System.out.println("1 year \n 2years \n 3");
+ }
  
 }
