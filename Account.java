@@ -26,7 +26,7 @@ public class Main {
     current.checkBalanceC();
     break;
    case 2:
-    current.sendMoney();
+    current.sendMoneyC();
     break;
    case 3:
     current.withdrawC();
