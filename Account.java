@@ -122,7 +122,7 @@ class Current extends Account{ //inheritance
   return overDraft;            //ENCAPSULATION
  }
  
- public void setOverDraft(float newOverDraft){
+ public void setOverDraft(float newOverDraft){   //ENCAPSULATION
   this.overDraft=newOverDraft;
  }
  
