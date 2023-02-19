@@ -5,7 +5,13 @@
 
 import java.util.Scanner;
 
-public class Account{
+public class Main {
+ public static void main(String[]args){
+  
+ }
+}
+
+class Account{
  public String accountName, accountTypes;
     public float accountBalance, depositAmount, withdrawalAmount;
     public int accountNum;
