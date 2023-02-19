@@ -134,7 +134,16 @@ System.out.println("Enter withdrawal amount:");
                     
 class FixedDeposit{
  public int interestPlans;
- public float totalInterest, fixedAccBal;
+ public float totalInterest, fixedAccBal,fixedDepositAmount, withdrawalAmountFD;
+ 
+  public void deposit(){
+     
+     System.out.print("Enter deposit amount:");
+     depositAmount= input.nextFloat();
+     fixedAccBal+=fixedDepositAmount;
+     System.out.print("Deposit successful!");
+ 
+}
  
  public void interestPlans(){
   System.out.println("Choose the savings period that suits you from the list below.The time period is in years.");
@@ -142,7 +151,16 @@ class FixedDeposit{
   interestPlans=input.nextInt();
   totalInterest=0.14*interestPlans*fixedAccBal;
   System.out.println("The total interest at the expiry of your plan is:" +totalInterest);
+  fixedAccBal+=totalInterest;
  }
  
+public void withdraw(){
+ if(withdrawalAmountFD<=fixedAccBal){
+  fixedAccBal-= withdrawalAmountFD;
+  System.out.println("Withdrawal successful!");
+ }
+ else {
+  System.out.println("Account balance too low");  
+}
  
 }
