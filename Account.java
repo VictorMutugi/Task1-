@@ -1,7 +1,7 @@
 //Account class:(public) String accountName, accountTypes;float accountBalance, depositAmount, withdrawalAmount;int accountNum;
 //Current class:(public)  float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;
 //Savings class: (public) float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;
-
+//Fixed Deposit class (public) String accountName, accountTypes;    (public) float accountBalance, depositAmount, withdrawalAmount; (public) int accountNum;
 
 import java.util.Scanner;
 
