@@ -150,7 +150,7 @@ class FixedDeposit{
   public void deposit(){
      
      System.out.print("Enter deposit amount:");
-     depositAmount= input.nextFloat();
+     fixedDepositAmount= input.nextFloat();
      fixedAccBal+=fixedDepositAmount;
      System.out.print("Deposit successful!");
  
