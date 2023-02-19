@@ -33,6 +33,10 @@ System.out.println("Enter withdrawal amount:");
   System.out.println("Account balance:");
   return accountBalance;
  }
+   
     
-    
+}
+
+class Current extends Account{
+ 
 }
