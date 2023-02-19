@@ -38,6 +38,7 @@ System.out.println("Enter withdrawal amount:");
 }
 
 class Current extends Account{
+ public float currentAccBal, depositAmount, withdrawalAmount;
  
  
 }
