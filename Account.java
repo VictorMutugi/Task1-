@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Main {
  public static void main(String[]args){
   Scanner myObj=new Scanner(System.in);
-  int num1,num2,num3;
+  int num1,num2,num3,num4;
   System.out.println("Welcome to your main account! We are delighted to have you.");
    System.out.println("Your account balance is zero.Please deposit some money.");
   Account account= new Account();
@@ -33,6 +33,7 @@ public class Main {
     break;
    default;
   }
+    break;
   
    case 2:
     Savings savings=new Savings;
@@ -45,15 +46,35 @@ public class Main {
       savings.withdraw();
       break;
      case 2:
-      account.checkbalance();
+      account.checkBalance();
       break;
        default;
     }
+    break;
     
+   case 3:
+    FixedDeposit fixed=new FixedDeposit();
+    fixed.deposit();
+    fixed.interestPlans();
+    System.out.println("To withdraw from this account press 1. To quit, press2");
+    num4=myObj.nextInt();
+    switch(num4){
+     case 1:
+      fixed.withdraw();
+      break;
+     case 2:
+      account.checkBalance();
+      break;
+      default;
+    }
+    break;
     
-    
-  
-  
+   case 4:
+    account.withdraw();
+    break;
+    default;
+    }
+  System.out.println("Thankyou for choosing us. We appreciate you.");
  }
 }
 
