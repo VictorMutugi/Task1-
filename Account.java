@@ -14,7 +14,7 @@ public class Main { //class concept
   switch(num1){
    case 1:
   Current current=new Current();//object
-  current.depositC();
+  current.deposit();
    System.out.println("Press 1 to check balance\n 2 to send money\n 3 to withdraw");
   num2=myObj.nextInt();
   switch(num2){
@@ -121,7 +121,7 @@ class Current extends Account{ //inheritance
   return accountBalance;
  };
  
- public void depositC(){//method
+ public void deposit(){//method OVERRIDING
   System.out.print("Enter deposit amount:");
      depositAmountC= input.nextFloat();
      currentAccBal+=depositAmountC;
