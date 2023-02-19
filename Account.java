@@ -129,5 +129,13 @@ System.out.println("Enter withdrawal amount:");
    }
  }
  
+}
+                        
+                    
+class FixedDeposit{
+ public String interestPlans;
+ public float totalInterest;
+ 
+  
  
 }
