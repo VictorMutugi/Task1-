@@ -123,7 +123,7 @@ class Savings extends Account{
  public void savingsInterest(){
    System.out.print("Enter the time period in months you lastly made a deposit:");
   time=input.nextFloat();
-  savingsInterest= 0.015*savingsAccBal*time;
+  savingsInterest= (float)0.015*savingsAccBal*time;
    savingsAccBal+=savingsInterest;
  }
  
