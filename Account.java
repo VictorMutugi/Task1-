@@ -96,7 +96,7 @@ System.out.println("Enter withdrawal amount:");
   return currentAccBal;
  }
  
- public float sendMoneyC(){
+ public void sendMoneyC(){
   System.out.println("Enter account number to send money to :");
   receiverAccBal= input.nextFloat();
   System.out.println("Enter amount of money to send:");
