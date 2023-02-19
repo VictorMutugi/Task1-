@@ -37,8 +37,38 @@ System.out.println("Enter withdrawal amount:");
     
 }
 
+//We have agreed that the Account class will display the accountBalance of all the three accounts and each account will have it's own accounting.
+
 class Current extends Account{
- public float currentAccBal, depositAmount, withdrawalAmount;
+ public float currentAccBal, depositAmountC, withdrawalAmountC;
  
+ public void depositC(){
+  System.out.print("Enter deposit amount:");
+     depositAmountC= input.nextFloat();
+     currentAccBal+=depositAmountC;
+     System.out.print("Deposit successful!");
+    }
+ 
+  public void withdrawC(){
+System.out.println("Enter withdrawal amount:");
+  withdrawalAmountC= input.nextFloat();
+  if(withdrawalAmountC<=currentAccBal){
+  currentAccBal-=withdrawalAmountC;
+  System.out.println("Withdrawal successful!");
+  }
+   else {
+    System.out.println("Not enough account balance!");
+   }
+ }
+ 
+ public float checkBalanceC(){
+  System.out.println("Account balance:");
+  return currentAccBal;
+ }
+ 
+ public float sendMoneyC(){
+  System.out.println("Enter account number to send money to :");
+  System.in
+ }
  
 }
