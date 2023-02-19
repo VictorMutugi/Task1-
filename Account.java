@@ -80,7 +80,8 @@ class Account{
     public int accountNum;//attribute
  
     Scanner input= new Scanner(System.in);//object
-    public void deposit(){
+ 
+    public void deposit(){//method
      
      System.out.print("Enter deposit amount:");
      depositAmount= input.nextFloat();
@@ -88,7 +89,7 @@ class Account{
      System.out.print("Deposit successful!");
     }
  
- public void withdraw(){
+ public void withdraw(){//method
 System.out.println("Enter withdrawal amount:");
   withdrawalAmount= input.nextFloat();
   if(withdrawalAmount<=accountBalance){
@@ -100,7 +101,7 @@ System.out.println("Enter withdrawal amount:");
    }
  }
   
- public float checkBalance(){
+ public float checkBalance(){//method
   System.out.println("Account balance:");
   return accountBalance;
  }
@@ -115,12 +116,12 @@ class Current extends Account{ //inheritance
  
  public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;//attributes
  
- public float checkBalance(){
+ public float checkBalance(){//method
   System.out.println("Account balance:");
   return accountBalance;
  };
  
- public void depositC(){
+ public void depositC(){//method
   System.out.print("Enter deposit amount:");
      depositAmountC= input.nextFloat();
      currentAccBal+=depositAmountC;
@@ -128,7 +129,7 @@ class Current extends Account{ //inheritance
   
     }
  
-  public void withdrawC(){
+  public void withdrawC(){//method
 System.out.println("Enter withdrawal amount:");
   withdrawalAmountC= input.nextFloat();
   if(withdrawalAmountC<=currentAccBal){
@@ -146,12 +147,12 @@ System.out.println("Enter withdrawal amount:");
    }
  }
  
- public float checkBalanceC(){
+ public float checkBalanceC(){//method
   System.out.println("Account balance:");
   return currentAccBal;
  }
  
- public void sendMoneyC(){
+ public void sendMoneyC(){//method
   System.out.println("Enter account number to send money to :");
   receiverAccBal= input.nextFloat();
   System.out.println("Enter amount of money to send:");
@@ -169,7 +170,7 @@ class Savings extends Account{ //inheritance
  Scanner input= new Scanner(System.in);//object
  public float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;//attributes
  
-  public void deposit(){
+  public void deposit(){//method
      
      System.out.print("Enter deposit amount:");
      savingsDeposit= input.nextFloat();
@@ -177,7 +178,7 @@ class Savings extends Account{ //inheritance
      System.out.print("Deposit successful!");
     }
  
- public void savingsInterest(){
+ public void savingsInterest(){//method
    System.out.print("Enter the time period in months after which you might withdraw your money:");
   time=input.nextFloat();
   savingsInterest= (float)0.015*savingsAccBal*time;
@@ -185,7 +186,7 @@ class Savings extends Account{ //inheritance
    System.out.println("Your total amount plus interest will be:" +savingsAccBal);
  }
  
- public void withdraw(){
+ public void withdraw(){//method
 System.out.println("Enter withdrawal amount:");
   savingsWithdrawalAmount= input.nextFloat();
   
@@ -206,7 +207,7 @@ class FixedDeposit extends Account { //inheritance
  public int interestPlans;//attribute
  public float totalInterest, fixedAccBal,fixedDepositAmount, withdrawalAmountFD;//attribute
  
-  public void deposit(){
+  public void deposit(){//method
      
      System.out.print("Enter deposit amount:");
      fixedDepositAmount= input.nextFloat();
@@ -215,7 +216,7 @@ class FixedDeposit extends Account { //inheritance
  
 }
  
- public void interestPlans(){
+ public void interestPlans(){//method
   System.out.println("Choose the savings period that suits you from the list below.The time period is in years.");
   System.out.println("1 \n 2 \n 3 \n 4 \n 5");
   interestPlans=input.nextInt();
@@ -224,7 +225,7 @@ class FixedDeposit extends Account { //inheritance
   fixedAccBal+=totalInterest;
  }
  
-public void withdraw(){
+public void withdraw(){//method
  if(withdrawalAmountFD<=fixedAccBal){
   fixedAccBal-= withdrawalAmountFD;
   System.out.println("Withdrawal successful!");
