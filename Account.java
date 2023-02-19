@@ -114,10 +114,12 @@ class Current extends Account{ //inheritance
  Scanner input= new Scanner(System.in);//object
  
  public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;//attributes
+ public double accBal;
  
- public float checkBalance(){//method
+ public double checkBalance(){//method OVERLOADING
+  accBal=accountBalance;
   System.out.println("Account balance:");
-  return accountBalance;
+  return accBal;
  };
  
  public void deposit(){//method OVERRIDING
