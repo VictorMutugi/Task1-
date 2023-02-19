@@ -185,10 +185,11 @@ class Savings extends Account{
     }
  
  public void savingsInterest(){
-   System.out.print("Enter the time period in months you lastly made a deposit:");
+   System.out.print("Enter the time period in months after which you might withdraw your money:");
   time=input.nextFloat();
   savingsInterest= (float)0.015*savingsAccBal*time;
    savingsAccBal+=savingsInterest;
+   System.out.println("Your total amount plus interest will be:" +savingsAccBal);
  }
  
  public void withdraw(){
