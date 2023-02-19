@@ -56,6 +56,7 @@ System.out.println("Enter withdrawal amount:");
 //We have agreed that the Account class will display the accountBalance of all the three accounts and each account will have it's own accounting.
 
 class Current extends Account{
+ Scanner input= new Scanner(System.in);
  
  public float currentAccBal, depositAmountC, withdrawalAmountC, receiverAccBal, amountSent,overDraft;
  
@@ -110,6 +111,7 @@ System.out.println("Enter withdrawal amount:");
 
 
 class Savings extends Account{
+ Scanner input= new Scanner(System.in);
  public float savingsInterest,time,savingsAccBal,savingsDeposit,savingsWithdrawalAmount;
  
   public void deposit(){
@@ -144,6 +146,7 @@ System.out.println("Enter withdrawal amount:");
                         
                     
 class FixedDeposit{
+ Scanner input= new Scanner(System.in);
  public int interestPlans;
  public float totalInterest, fixedAccBal,fixedDepositAmount, withdrawalAmountFD;
  
