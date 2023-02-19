@@ -31,12 +31,12 @@ public class Main {
    case 3:
     current.withdrawC();
     break;
-   default;
+   default:
   }
     break;
   
    case 2:
-    Savings savings=new Savings;
+    Savings savings=new Savings();
     savings.deposit();
     savings.interest();
     System.out.println("To withdraw press 1. To quit, press 2.");
@@ -48,7 +48,7 @@ public class Main {
      case 2:
       account.checkBalance();
       break;
-       default;
+     default:
     }
     break;
     
@@ -65,14 +65,14 @@ public class Main {
      case 2:
       account.checkBalance();
       break;
-      default;
+     default:
     }
     break;
     
    case 4:
     account.withdraw();
     break;
-    default;
+   default:
     }
   System.out.println("Thankyou for choosing us. We appreciate you.");
  }
