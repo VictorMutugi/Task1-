@@ -8,9 +8,35 @@ import java.util.Scanner;
 public class Main {
  public static void main(String[]args){
   Scanner myObj=new Scanner(System.in);
+  int num1,num2;
+  System.out.println("Welcome to your main account! We are delighted to have you.");
    System.out.println("Your account balance is zero.Please deposit some money.");
   Account account= new Account();
   account.deposit();
+    System.out.println("Please choose the type of account that you want to access.\n press 1 for a current account.\n 2 For a Savings account\n 3 For a Fixed Deposit Account\n4 To withdraw money from your main account");
+  num1=myObj.nextInt();
+  switch(num1){
+   case 1:
+  Current current=new Current;
+  current.depositC();
+   System.out.println("Press 1 to check balance\n 2 to send money\n 3 to withdraw");
+  num2=myObj.nextInt();
+  switch(num2){
+   case 1:
+    current.checkBalanceC();
+    break;
+   case 2:
+    current.sendMoney();
+    break;
+   case 3:
+    current.withdrawC();
+    break;
+   default;
+  }
+   case 2:
+    Savings savings=new Savings;
+    System.out.println("");
+    
   
   
  }
