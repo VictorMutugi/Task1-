@@ -17,7 +17,7 @@ public class Main {
   num1=myObj.nextInt();
   switch(num1){
    case 1:
-  Current current=new Current;
+  Current current=new Current();
   current.depositC();
    System.out.println("Press 1 to check balance\n 2 to send money\n 3 to withdraw");
   num2=myObj.nextInt();
